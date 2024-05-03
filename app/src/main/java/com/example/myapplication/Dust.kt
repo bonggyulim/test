@@ -16,12 +16,14 @@ data class DustResponse(
 data class DustBody(
     val totalCount: Int,
     @SerializedName("items")
-    val dustItems: MutableList<DustItem>
+    val dustItem: MutableList<DustItem>,
+    val pageNo: Int,
+    val numOfRows: Int
 )
 
 data class DustHeader(
-    val resultCode: String,
-    val resultMsg: String
+    val resultMsg: String,
+    val resultCode: String
 )
 
 data class DustItem(
